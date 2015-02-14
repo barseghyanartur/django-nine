@@ -1,0 +1,27 @@
+syntax: regexp
+\.pyc$
+\.hgignore~
+\.gitignore~
+\.git/
+\.tox/
+\.travis\.yml~
+
+^MANIFEST\.in~
+^tmp/
+\.zip
+^codebin/
+^release/
+^deploy/
+^forks/
+^examples/db/example\.db
+^examples/tmp/
+^examples/logs/django\.log
+^examples/logs/nine\.log
+^examples/media/cache/
+^examples/static/
+^builddocs/
+^builddocs.zip
+^build/
+^dist/
+^src/django_nine\.egg-info
+^examples/simple/db.sqlite3

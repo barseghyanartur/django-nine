@@ -8,14 +8,14 @@ try:
 except:
     readme = ''
 
-version = '0.1'
+version = '0.1.1'
 
 install_requires = [
     'Django',
 ]
 
 tests_require = [
-    'simple_timer>=0.2',
+    'mock',
 ]
 
 try:
@@ -40,7 +40,7 @@ setup(
         "Framework :: Django",
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
     ],
     keywords = 'django, compatibility',
     author = 'Artur Barseghyan',

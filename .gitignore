@@ -11,6 +11,7 @@ tmp/
 .zip
 /codebin/
 /release/
+/releases/
 /forks/
 /deploy/
 /examples/db/example.db

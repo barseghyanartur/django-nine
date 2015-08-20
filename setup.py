@@ -8,7 +8,7 @@ try:
 except:
     readme = ''
 
-version = '0.1.1'
+version = '0.1.2'
 
 install_requires = [
     'Django',
@@ -20,7 +20,11 @@ tests_require = [
 
 try:
     PY2 = sys.version_info[0] == 2
+    LTE_PY26 = PY2 and (7 > sys.version_info[1])
     PY3 = sys.version_info[0] == 3
+
+    if LTE_PY26:
+        install_requires.append('importlib')
 except:
     pass
 

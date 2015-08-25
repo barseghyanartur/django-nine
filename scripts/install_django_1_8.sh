@@ -1,6 +1,6 @@
 pip install -r examples/requirements_django_1_8.txt
 python setup.py install
-#mkdir examples/logs
+mkdir var/logs
 #mkdir examples/db
 #mkdir examples/media
 #mkdir examples/media/static

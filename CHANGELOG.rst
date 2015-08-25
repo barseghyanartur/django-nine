@@ -17,7 +17,7 @@ are used for versioning (schema follows below):
 
 0.1.2
 -----
-2015-08-21
+2015-08-25
 
 - Python 2.6 fixes.
 

@@ -1,4 +1,4 @@
-pip install -r examples/requirements_django_1_7.txt
+pip install -r examples/simple/requirements_django_1_5.txt
 python setup.py install
 mkdir var/logs
 #mkdir examples/db

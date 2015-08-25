@@ -12,6 +12,7 @@ syntax: regexp
 ^codebin/
 ^release/
 ^deploy/
+^var/
 ^forks/
 ^examples/db/example\.db
 ^examples/tmp/

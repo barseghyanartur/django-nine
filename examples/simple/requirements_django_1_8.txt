@@ -1,2 +1,2 @@
-https://www.djangoproject.com/download/1.8a1/tarball/
-
+Django==1.8.4
+#importlib

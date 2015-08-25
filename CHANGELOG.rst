@@ -15,6 +15,12 @@ are used for versioning (schema follows below):
   0.3.2 to 0.4).
 - All backwards incompatible changes are mentioned in this document.
 
+0.1.3
+-----
+2015-08-25
+
+- Recreated release under 0.1.3 on PyPI due to upload error.
+
 0.1.2
 -----
 2015-08-25

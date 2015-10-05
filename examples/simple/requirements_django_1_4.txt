@@ -1,2 +1,2 @@
 -r requirements_base.txt
-Django==1.6.11
+Django==1.4.22

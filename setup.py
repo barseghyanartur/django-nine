@@ -8,14 +8,15 @@ try:
 except:
     readme = ''
 
-version = '0.1.5'
+version = '0.1.6'
 
 install_requires = [
-    'Django',
+    #'Django',
     #'mock',
 ]
 
 tests_require = [
+    'Django',
     'mock',
 ]
 

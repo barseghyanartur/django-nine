@@ -6,10 +6,15 @@ __all__ = ('VersionsTest',)
 
 import unittest
 import mock
+# For Python3 >= 3.4
 try:
     from importlib import reload
+# For Python3 < 3.4
 except ImportError as err:
-    pass
+    try:
+        from imp import reload
+    except ImportError as err:
+        pass
 
 import django
 

@@ -192,6 +192,41 @@ class VersionsTest(unittest.TestCase):
         self.assertTrue(versions.DJANGO_GTE_1_8)
         self.assertTrue(not versions.DJANGO_GTE_1_9)
 
+    @print_info
+    @mock.patch('django.get_version', mock.MagicMock(return_value='1.10'))
+    def test_django_1_10(self):
+        """
+        Tests as if we were using Django==1.10.
+        """
+        from nine import versions
+        reload(versions)
+
+        # Exact version matching
+        self.assertTrue(not versions.DJANGO_1_4)
+        self.assertTrue(not versions.DJANGO_1_5)
+        self.assertTrue(not versions.DJANGO_1_6)
+        self.assertTrue(not versions.DJANGO_1_7)
+        self.assertTrue(not versions.DJANGO_1_8)
+        self.assertTrue(not versions.DJANGO_1_9)
+        self.assertTrue(versions.DJANGO_1_10)
+
+        # Less than or equal matching
+        self.assertTrue(not versions.DJANGO_LTE_1_4)
+        self.assertTrue(not versions.DJANGO_LTE_1_5)
+        self.assertTrue(not versions.DJANGO_LTE_1_6)
+        self.assertTrue(not versions.DJANGO_LTE_1_7)
+        self.assertTrue(not versions.DJANGO_LTE_1_8)
+        self.assertTrue(not versions.DJANGO_LTE_1_9)
+
+        # Greater than or equal matching
+        self.assertTrue(versions.DJANGO_GTE_1_4)
+        self.assertTrue(versions.DJANGO_GTE_1_5)
+        self.assertTrue(versions.DJANGO_GTE_1_6)
+        self.assertTrue(versions.DJANGO_GTE_1_7)
+        self.assertTrue(versions.DJANGO_GTE_1_8)
+        self.assertTrue(versions.DJANGO_GTE_1_9)
+        self.assertTrue(versions.DJANGO_GTE_1_10)
+
 
 if __name__ == "__main__":
     unittest.main()

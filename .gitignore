@@ -5,6 +5,7 @@
 .hgtags
 .tox/
 .travis.yml~
+.idea/
 
 MANIFEST.in~
 tmp/
@@ -25,5 +26,5 @@ tmp/
 /dist/
 /var/
 /src/django_nine.egg-info
-/examples/simple/local_settings.py
+/examples/simple/simple/local_settings.py
 /examples/simple/db.sqlite3

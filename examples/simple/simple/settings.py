@@ -21,6 +21,7 @@ SECRET_KEY = 'uzc&9xi6b#dz^z7tpa+br3ohq)-9%v9ux@9^t!(5fl41n%&mn$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DEV = False
 
 TEMPLATE_DEBUG = True
 
@@ -81,3 +82,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Do not put any settings below this line
+try:
+    from local_settings import *
+except Exception as err:
+    pass
+
+# Make the `django-nine` package available without installation.
+if DEV:
+    import sys
+    sys.path.insert(0, os.path.abspath('../../src'))

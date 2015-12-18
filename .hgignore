@@ -5,6 +5,7 @@ syntax: regexp
 \.git/
 \.tox/
 \.travis\.yml~
+\.idea/
 
 ^MANIFEST\.in~
 ^tmp/
@@ -26,3 +27,5 @@ syntax: regexp
 ^dist/
 ^src/django_nine\.egg-info
 ^examples/simple/db.sqlite3
+^examples/simple/simple/local_settings.py
+

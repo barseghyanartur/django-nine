@@ -1,9 +1,3 @@
-__title__ = 'nine.tests.test_versions'
-__author__ = 'Artur Barseghyan'
-__copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
-__all__ = ('VersionsTest',)
-
 import unittest
 import mock
 # For Python3 >= 3.4
@@ -19,6 +13,13 @@ except ImportError as err:
 import django
 
 from nine.tests.base import print_info
+
+__title__ = 'nine.tests.test_versions'
+__author__ = 'Artur Barseghyan'
+__copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
+__license__ = 'GPL 2.0/LGPL 2.1'
+__all__ = ('VersionsTest',)
+
 
 class VersionsTest(unittest.TestCase):
     """

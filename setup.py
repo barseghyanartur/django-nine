@@ -8,7 +8,7 @@ try:
 except:
     readme = ''
 
-version = '0.1.7'
+version = '0.1.8'
 
 install_requires = [
     #'Django',
@@ -31,11 +31,11 @@ except:
     pass
 
 setup(
-    name = 'django-nine',
-    version = version,
-    description = ("Compatibility library for Django."),
-    long_description = "{0}".format(readme),
-    classifiers = [
+    name='django-nine',
+    version=version,
+    description=("Compatibility library for Django."),
+    long_description="{0}".format(readme),
+    classifiers=[
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
@@ -50,15 +50,15 @@ setup(
         "Operating System :: OS Independent",
         "Development Status :: 4 - Beta",
     ],
-    keywords = 'django, compatibility',
-    author = 'Artur Barseghyan',
-    author_email = 'artur.barseghyan@gmail.com',
-    url = 'https://github.com/barseghyanartur/django-nine/',
-    package_dir = {'': 'src'},
-    packages = find_packages(where='./src'),
-    license = 'GPL 2.0/LGPL 2.1',
-    install_requires = install_requires,
-    tests_require = tests_require,
-    package_data = {},
-    include_package_data = True,
+    keywords='django, compatibility',
+    author='Artur Barseghyan',
+    author_email='artur.barseghyan@gmail.com',
+    url='https://github.com/barseghyanartur/django-nine/',
+    package_dir={'': 'src'},
+    packages=find_packages(where='./src'),
+    license='GPL 2.0/LGPL 2.1',
+    install_requires=install_requires,
+    tests_require=tests_require,
+    package_data={},
+    include_package_data=True,
 )

@@ -2,12 +2,6 @@
 Compatibility module for safe and sane User model import.
 """
 
-__title__ = 'nine.user'
-__author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
-__copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
-__all__ = ('User',)
-
 import importlib
 
 from django.conf import settings
@@ -41,3 +35,9 @@ else:
             "``settings.INSTALLED_APPS``"
             "".format(settings.AUTH_USER_MODEL, user_app_name)
         )
+
+__title__ = 'nine.user'
+__author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
+__copyright__ = 'Copyright (c) 2015-2016 Artur Barseghyan'
+__license__ = 'GPL 2.0/LGPL 2.1'
+__all__ = ('User',)

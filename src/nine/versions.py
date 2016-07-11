@@ -1,72 +1,66 @@
 """
-Compatibility module. Contains information about the current Django version in
-use, including (LTE and GTE statements).
+Contains information about the current Django version in use, including (LTE
+and GTE).
 """
-
-__title__ = 'nine.versions'
-__author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
-__copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
-__all__ = (
-    'LOOSE_DJANGO_VERSION', 'LOOSE_DJANGO_MINOR_VERSION',
-
-    'DJANGO_1_4', 'DJANGO_1_5', 'DJANGO_1_6', 'DJANGO_1_7', 'DJANGO_1_8',
-    'DJANGO_1_9', 'DJANGO_1_10', 'DJANGO_1_11', 'DJANGO_2_0',
-
-    'DJANGO_GTE_1_4', 'DJANGO_GTE_1_5', 'DJANGO_GTE_1_6', 'DJANGO_GTE_1_7',
-    'DJANGO_GTE_1_8', 'DJANGO_GTE_1_9', 'DJANGO_GTE_1_10', 'DJANGO_GTE_1_11',
-    'DJANGO_GTE_2_0',
-
-    'DJANGO_LTE_1_4', 'DJANGO_LTE_1_5', 'DJANGO_LTE_1_6', 'DJANGO_LTE_1_7',
-    'DJANGO_LTE_1_8', 'DJANGO_LTE_1_9', 'DJANGO_LTE_1_10', 'DJANGO_LTE_1_11',
-    'DJANGO_LTE_2_0',
-)
 
 from distutils.version import LooseVersion
 
 import django
 
+__title__ = 'nine.versions'
+__author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
+__copyright__ = 'Copyright (c) 2015-2016 Artur Barseghyan'
+__license__ = 'GPL 2.0/LGPL 2.1'
+__all__ = [
+    'LOOSE_DJANGO_VERSION', 'LOOSE_DJANGO_MINOR_VERSION',
+]
+
 LOOSE_DJANGO_VERSION = LooseVersion(django.get_version())
 LOOSE_DJANGO_MINOR_VERSION = LooseVersion(
     '.'.join([str(i) for i in LOOSE_DJANGO_VERSION.version[0:2]])
 )
-LOOSE_VERSION_1_4 = LooseVersion('1.4')
-LOOSE_VERSION_1_5 = LooseVersion('1.5')
-LOOSE_VERSION_1_6 = LooseVersion('1.6')
-LOOSE_VERSION_1_7 = LooseVersion('1.7')
-LOOSE_VERSION_1_8 = LooseVersion('1.8')
-LOOSE_VERSION_1_9 = LooseVersion('1.9')
-LOOSE_VERSION_1_10 = LooseVersion('1.10')
-LOOSE_VERSION_1_11 = LooseVersion('1.11')
-LOOSE_VERSION_2_0 = LooseVersion('2.0')
-LOOSE_VERSION_2_1 = LooseVersion('2.1')
+
+# Loose versions
+LOOSE_VERSIONS = (
+    '1.4', '1.5', '1.6', '1.7', '1.8', '1.9', '1.10', '1.11', '2.0', '2.1',
+)
+
+for v in LOOSE_VERSIONS:
+    var_name = 'LOOSE_VERSION_{0}'.format(v.replace('.', '_'))
+    globals()[var_name] = LooseVersion(v)
+    __all__.append(var_name)
 
 # Exact versions
-DJANGO_1_4 = LOOSE_VERSION_1_4 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_1_5
-DJANGO_1_5 = LOOSE_VERSION_1_5 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_1_6
-DJANGO_1_6 = LOOSE_VERSION_1_6 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_1_7
-DJANGO_1_7 = LOOSE_VERSION_1_7 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_1_8
-DJANGO_1_8 = LOOSE_VERSION_1_8 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_1_9
-DJANGO_1_9 = LOOSE_VERSION_1_9 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_1_10
-DJANGO_1_10 = LOOSE_VERSION_1_10 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_1_11
-DJANGO_2_0 = LOOSE_VERSION_2_0 <= LOOSE_DJANGO_VERSION < LOOSE_VERSION_2_1
+EXACT_VERSIONS = LOOSE_VERSIONS[:-1]
+
+for i, v in enumerate(EXACT_VERSIONS):
+    l_cur = globals()['LOOSE_VERSION_{0}' \
+                      ''.format(LOOSE_VERSIONS[i].replace('.', '_'))]
+    l_nxt = globals()['LOOSE_VERSION_{0}' \
+                      ''.format(LOOSE_VERSIONS[i+1].replace('.', '_'))]
+    var_name = 'DJANGO_{0}'.format(v.replace('.', '_'))
+    globals()[var_name] = (l_cur <= LOOSE_DJANGO_VERSION < l_nxt)
+    __all__.append(var_name)
 
 # LTE list
-DJANGO_LTE_1_4 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_1_4
-DJANGO_LTE_1_5 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_1_5
-DJANGO_LTE_1_6 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_1_6
-DJANGO_LTE_1_7 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_1_7
-DJANGO_LTE_1_8 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_1_8
-DJANGO_LTE_1_9 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_1_9
-DJANGO_LTE_1_10 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_1_10
-DJANGO_LTE_2_0 = LOOSE_DJANGO_MINOR_VERSION <= LOOSE_VERSION_2_0
+LTE_VERSIONS = LOOSE_VERSIONS[:-1]
+
+for i, v in enumerate(EXACT_VERSIONS):
+    l_cur = globals()['LOOSE_VERSION_{0}' \
+                      ''.format(LOOSE_VERSIONS[i].replace('.', '_'))]
+    var_name = 'DJANGO_LTE_{0}'.format(v.replace('.', '_'))
+    globals()[var_name] = (LOOSE_DJANGO_MINOR_VERSION <= l_cur)
 
 # GTE list
-DJANGO_GTE_1_4 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_1_4
-DJANGO_GTE_1_5 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_1_5
-DJANGO_GTE_1_6 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_1_6
-DJANGO_GTE_1_7 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_1_7
-DJANGO_GTE_1_8 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_1_8
-DJANGO_GTE_1_9 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_1_9
-DJANGO_GTE_1_10 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_1_10
-DJANGO_GTE_2_0 = LOOSE_DJANGO_MINOR_VERSION >= LOOSE_VERSION_2_0
+GTE_VERSIONS = LOOSE_VERSIONS[:-1]
+
+for i, v in enumerate(EXACT_VERSIONS):
+    l_cur = globals()['LOOSE_VERSION_{0}' \
+                      ''.format(LOOSE_VERSIONS[i].replace('.', '_'))]
+    var_name = 'DJANGO_GTE_{0}'.format(v.replace('.', '_'))
+    globals()[var_name] = (
+        LOOSE_DJANGO_MINOR_VERSION >= l_cur
+    )
+    __all__.append(var_name)
+
+__all__ = tuple(__all__)

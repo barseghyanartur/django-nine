@@ -2,7 +2,7 @@ from __future__ import print_function
 
 __title__ = 'nine.tests.base'
 __author__ = 'Artur Barseghyan'
-__copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
+__copyright__ = 'Copyright (c) 2015-2016 Artur Barseghyan'
 __license__ = 'GPL 2.0/LGPL 2.1'
 __all__ = ('PRINT_INFO', 'TRACK_TIME', 'print_info',)
 

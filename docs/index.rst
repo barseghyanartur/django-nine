@@ -1,10 +1,10 @@
-===============================================
+===========
 django-nine
-===============================================
+===========
 `django-nine` - compatibility library for Django.
 
 Installation
-===============================================
+============
 1. Install latest stable version from PyPI:
 
 .. code-block:: none
@@ -24,7 +24,7 @@ Or latest stable version from BitBucket:
     $ pip install -e hg+https://bitbucket.org/barseghyanartur/django-nine@stable#egg=django-nine
 
 Usage
-===============================================
+=====
 For example, if Django version installed in your environment is 1.7.4, then
 the following would be true.
 
@@ -46,15 +46,15 @@ Or you could safely import the user model as follows:
     from nine.user import User
 
 License
-===============================================
+=======
 GPL 2.0/LGPL 2.1
 
 Support
-===============================================
+=======
 For any issues contact me at the e-mail given in the `Author` section.
 
 Author
-===============================================
+======
 Artur Barseghyan <artur.barseghyan@gmail.com>
 
 Documentation!

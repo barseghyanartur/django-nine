@@ -15,6 +15,12 @@ are used for versioning (schema follows below):
   0.3.2 to 0.4).
 - All backwards incompatible changes are mentioned in this document.
 
+0.1.9
+-----
+2016-07-12
+
+- Adding missing `DJANGO_LTE_*` versions to `__all__`.
+
 0.1.8
 -----
 2016-07-11

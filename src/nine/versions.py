@@ -50,6 +50,7 @@ for i, v in enumerate(EXACT_VERSIONS):
                       ''.format(LOOSE_VERSIONS[i].replace('.', '_'))]
     var_name = 'DJANGO_LTE_{0}'.format(v.replace('.', '_'))
     globals()[var_name] = (LOOSE_DJANGO_MINOR_VERSION <= l_cur)
+    __all__.append(var_name)
 
 # GTE list
 GTE_VERSIONS = LOOSE_VERSIONS[:-1]

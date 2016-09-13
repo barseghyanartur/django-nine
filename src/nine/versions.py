@@ -23,6 +23,7 @@ LOOSE_DJANGO_MINOR_VERSION = LooseVersion(
 # Loose versions
 LOOSE_VERSIONS = (
     '1.4', '1.5', '1.6', '1.7', '1.8', '1.9', '1.10', '1.11', '2.0', '2.1',
+    '2.2', '3.0'
 )
 
 for v in LOOSE_VERSIONS:

@@ -30,5 +30,4 @@ syntax: regexp
 ^dist/
 ^src/django_nine\.egg-info
 ^examples/simple/db.sqlite3
-^examples/simple/simple/local_settings.py
-
+^examples/simple/simple/settings/local_settings.py

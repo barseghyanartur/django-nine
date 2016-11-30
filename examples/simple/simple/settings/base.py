@@ -10,8 +10,12 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import sys
+
+from .core import PROJECT_DIR, gettext
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-PROJECT_DIR = lambda base : os.path.abspath(os.path.join(os.path.dirname(__file__), base).replace('\\','/'))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -67,7 +71,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -85,11 +89,12 @@ STATIC_URL = '/static/'
 
 # Do not put any settings below this line
 try:
-    from local_settings import *
+    from .local_settings import *
 except Exception as err:
     pass
 
 # Make the `django-nine` package available without installation.
 if DEV:
-    import sys
-    sys.path.insert(0, os.path.abspath('../../src'))
+    nine_source_path = os.environ.get('NINE_SOURCE_PATH', 'src')
+    # sys.path.insert(0, os.path.abspath('src'))
+    sys.path.insert(0, os.path.abspath(nine_source_path))

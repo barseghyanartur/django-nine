@@ -23,6 +23,7 @@ LOOSE_DJANGO_MINOR_VERSION = LooseVersion(
 # Loose versions
 LOOSE_VERSIONS = (
     '1.4', '1.5', '1.6', '1.7', '1.8', '1.9', '1.10', '1.11', '2.0', '2.1',
+    '2.2', '3.0'
 )
 
 for v in LOOSE_VERSIONS:
@@ -34,9 +35,9 @@ for v in LOOSE_VERSIONS:
 EXACT_VERSIONS = LOOSE_VERSIONS[:-1]
 
 for i, v in enumerate(EXACT_VERSIONS):
-    l_cur = globals()['LOOSE_VERSION_{0}' \
+    l_cur = globals()['LOOSE_VERSION_{0}'
                       ''.format(LOOSE_VERSIONS[i].replace('.', '_'))]
-    l_nxt = globals()['LOOSE_VERSION_{0}' \
+    l_nxt = globals()['LOOSE_VERSION_{0}'
                       ''.format(LOOSE_VERSIONS[i+1].replace('.', '_'))]
     var_name = 'DJANGO_{0}'.format(v.replace('.', '_'))
     globals()[var_name] = (l_cur <= LOOSE_DJANGO_VERSION < l_nxt)
@@ -46,7 +47,7 @@ for i, v in enumerate(EXACT_VERSIONS):
 LTE_VERSIONS = LOOSE_VERSIONS[:-1]
 
 for i, v in enumerate(EXACT_VERSIONS):
-    l_cur = globals()['LOOSE_VERSION_{0}' \
+    l_cur = globals()['LOOSE_VERSION_{0}'
                       ''.format(LOOSE_VERSIONS[i].replace('.', '_'))]
     var_name = 'DJANGO_LTE_{0}'.format(v.replace('.', '_'))
     globals()[var_name] = (LOOSE_DJANGO_MINOR_VERSION <= l_cur)
@@ -56,7 +57,7 @@ for i, v in enumerate(EXACT_VERSIONS):
 GTE_VERSIONS = LOOSE_VERSIONS[:-1]
 
 for i, v in enumerate(EXACT_VERSIONS):
-    l_cur = globals()['LOOSE_VERSION_{0}' \
+    l_cur = globals()['LOOSE_VERSION_{0}'
                       ''.format(LOOSE_VERSIONS[i].replace('.', '_'))]
     var_name = 'DJANGO_GTE_{0}'.format(v.replace('.', '_'))
     globals()[var_name] = (
@@ -65,3 +66,16 @@ for i, v in enumerate(EXACT_VERSIONS):
     __all__.append(var_name)
 
 __all__ = tuple(__all__)
+
+# Clean up
+try:
+    del l_cur
+    del l_nxt
+    del var_name
+    del i
+    del v
+except NameError:
+    pass
+
+del LooseVersion
+del django

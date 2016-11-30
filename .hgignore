@@ -6,6 +6,8 @@ syntax: regexp
 \.tox/
 \.travis\.yml~
 \.idea/
+\.cache/
+\.coverage
 
 ^MANIFEST\.in~
 ^tmp/
@@ -17,6 +19,7 @@ syntax: regexp
 ^forks/
 ^examples/db/example\.db
 ^examples/tmp/
+^examples/var/
 ^examples/logs/django\.log
 ^examples/logs/nine\.log
 ^examples/media/cache/

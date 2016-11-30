@@ -6,6 +6,8 @@
 .tox/
 .travis.yml~
 .idea/
+.cache/
+.coverage
 
 MANIFEST.in~
 tmp/
@@ -17,7 +19,7 @@ tmp/
 /deploy/
 /examples/db/example.db
 /examples/tmp/
-/examples/logs/
+/examples/var/logs/
 /examples/media/cache/
 /examples/static/
 /builddocs/

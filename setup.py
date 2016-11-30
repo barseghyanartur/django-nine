@@ -4,11 +4,10 @@ from setuptools import setup, find_packages
 
 try:
     readme = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-    readme = readme.replace('.. code-block:: none', '.. code-block::')
 except:
     readme = ''
 
-version = '0.1.9'
+version = '0.1.11'
 
 install_requires = [
     #'Django',
@@ -33,7 +32,7 @@ except:
 setup(
     name='django-nine',
     version=version,
-    description=("Compatibility library for Django."),
+    description="Compatibility library for Django.",
     long_description="{0}".format(readme),
     classifiers=[
         "Programming Language :: Python :: 2.6",
@@ -44,7 +43,8 @@ setup(
         "Programming Language :: Python :: 3.5",
         "Environment :: Web Environment",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-        "License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)",
+        "License :: OSI Approved :: GNU Lesser General Public License v2 or "
+        "later (LGPLv2+)",
         "Framework :: Django",
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",

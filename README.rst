@@ -7,21 +7,21 @@ Installation
 ============
 1. Install latest stable version from PyPI:
 
-.. code-block:: none
+.. code-block:: text
 
-    $ pip install django-nine
+    pip install django-nine
 
 Or latest stable version from GitHub:
 
-.. code-block:: none
+.. code-block:: text
 
-    $ pip install -e git+https://github.com/barseghyanartur/django-nine@stable#egg=django-nine
+    pip install -e https://github.com/barseghyanartur/django-nine/archive/stable.zip
 
 Or latest stable version from BitBucket:
 
-.. code-block:: none
+.. code-block:: text
 
-    $ pip install -e hg+https://bitbucket.org/barseghyanartur/django-nine@stable#egg=django-nine
+    pip install -e https://bitbucket.org/barseghyanartur/django-nine/get/stable.zip
 
 Usage
 =====
@@ -32,12 +32,12 @@ the following would be true.
 
     from nine import versions
 
-    versions.DJANGO_1_7 # True
-    versions.DJANGO_LTE_1_7 # True
-    versions.DJANGO_GTE_1_7 # True
-    versions.DJANGO_GTE_1_8 # False
-    versions.DJANGO_GTE_1_4 # True
-    versions.DJANGO_LTE_1_6 # False
+    versions.DJANGO_1_7  # True
+    versions.DJANGO_LTE_1_7  # True
+    versions.DJANGO_GTE_1_7  # True
+    versions.DJANGO_GTE_1_8  # False
+    versions.DJANGO_GTE_1_4  # True
+    versions.DJANGO_LTE_1_6  # False
 
 Or you could safely import the user model as follows:
 
@@ -51,7 +51,7 @@ GPL 2.0/LGPL 2.1
 
 Support
 =======
-For any issues contact me at the e-mail given in the `Author` section.
+For any issues contact me at the e-mail given in the `Author`_ section.
 
 Author
 ======

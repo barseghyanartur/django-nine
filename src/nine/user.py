@@ -7,7 +7,7 @@ import importlib
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 
-from nine.versions import DJANGO_LTE_1_4, DJANGO_LTE_1_6, DJANGO_GTE_1_7
+from .versions import DJANGO_LTE_1_4, DJANGO_LTE_1_6, DJANGO_GTE_1_7
 
 if DJANGO_LTE_1_4:
     from django.contrib.auth.models import User
@@ -31,8 +31,8 @@ else:
 
     if User is None:
         raise ImproperlyConfigured(
-            "You have defined a custom user model {0}, but the app {1} is not in "
-            "``settings.INSTALLED_APPS``"
+            "You have defined a custom user model {0}, but the app {1} is "
+            "not in ``settings.INSTALLED_APPS``"
             "".format(settings.AUTH_USER_MODEL, user_app_name)
         )
 

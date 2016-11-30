@@ -12,7 +12,7 @@ except ImportError as err:
 
 import django
 
-from nine.tests.base import print_info
+from .base import log_info
 
 __title__ = 'nine.tests.test_versions'
 __author__ = 'Artur Barseghyan'
@@ -28,7 +28,7 @@ class VersionsTest(unittest.TestCase):
     def setUp(self):
         pass
 
-    @print_info
+    @log_info
     @mock.patch('django.get_version', mock.MagicMock(return_value='1.4.21'))
     def test_django_1_4_21(self):
         """
@@ -61,7 +61,7 @@ class VersionsTest(unittest.TestCase):
         self.assertTrue(not versions.DJANGO_GTE_1_8)
         self.assertTrue(not versions.DJANGO_GTE_1_9)
 
-    @print_info
+    @log_info
     @mock.patch('django.get_version', mock.MagicMock(return_value='1.5.5'))
     def test_django_1_5_5(self):
         """
@@ -94,7 +94,7 @@ class VersionsTest(unittest.TestCase):
         self.assertTrue(not versions.DJANGO_GTE_1_8)
         self.assertTrue(not versions.DJANGO_GTE_1_9)
 
-    @print_info
+    @log_info
     @mock.patch('django.get_version', mock.MagicMock(return_value='1.6.5'))
     def test_django_1_6_5(self):
         """
@@ -127,7 +127,7 @@ class VersionsTest(unittest.TestCase):
         self.assertTrue(not versions.DJANGO_GTE_1_8)
         self.assertTrue(not versions.DJANGO_GTE_1_9)
 
-    @print_info
+    @log_info
     @mock.patch('django.get_version', mock.MagicMock(return_value='1.7.5'))
     def test_django_1_7_5(self):
         """
@@ -160,7 +160,7 @@ class VersionsTest(unittest.TestCase):
         self.assertTrue(not versions.DJANGO_GTE_1_8)
         self.assertTrue(not versions.DJANGO_GTE_1_9)
 
-    @print_info
+    @log_info
     @mock.patch('django.get_version', mock.MagicMock(return_value='1.8.a1'))
     def test_django_1_8_a1(self):
         """
@@ -193,7 +193,7 @@ class VersionsTest(unittest.TestCase):
         self.assertTrue(versions.DJANGO_GTE_1_8)
         self.assertTrue(not versions.DJANGO_GTE_1_9)
 
-    @print_info
+    @log_info
     @mock.patch('django.get_version', mock.MagicMock(return_value='1.10'))
     def test_django_1_10(self):
         """

@@ -5,7 +5,7 @@ django-nine
 
 Installation
 ============
-1. Install latest stable version from PyPI:
+Install latest stable version from PyPI:
 
 .. code-block:: text
 
@@ -44,6 +44,32 @@ Or you could safely import the user model as follows:
 .. code-block:: python
 
     from nine.user import User
+
+Testing
+=======
+Simply type:
+
+.. code-block:: sh
+
+    ./runtests.py
+
+or use tox:
+
+.. code-block:: sh
+
+    tox
+
+or use tox to check specific env:
+
+.. code-block:: sh
+
+    tox -e py35
+
+or run Django tests:
+
+.. code-block:: sh
+
+    ./manage.py test nine --settings=settings.testing
 
 License
 =======

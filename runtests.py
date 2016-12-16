@@ -7,6 +7,7 @@ import pytest
 def main():
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.testing")
     sys.path.insert(0, "examples/simple/simple")
+    sys.path.insert(0, "src")
     return pytest.main()
 
 

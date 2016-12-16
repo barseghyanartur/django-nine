@@ -8,6 +8,8 @@
 .idea/
 .cache/
 .coverage
+/htmlcov/
+*.py,cover
 
 MANIFEST.in~
 tmp/

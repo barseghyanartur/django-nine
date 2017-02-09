@@ -1,6 +1,6 @@
-===============================================
+=====
 TODOs
-===============================================
+=====
 Based on the MoSCoW principle. Must haves and should haves are planned to be
 worked on.
 
@@ -8,14 +8,14 @@ worked on.
 * Features/issues marked with minus (-) are yet to be implemented.
 
 Must haves
-===============================================
-- Tests.
+==========
++ Tests.
 
 Should haves
-===============================================
+============
 
 Could haves
-===============================================
+===========
 
 Would haves
-===============================================
+===========

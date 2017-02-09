@@ -6,8 +6,9 @@
 .tox/
 .travis.yml~
 .idea/
-.cache/
-.coverage
+ghostdriver.log
+/.coverage
+/.cache/
 /htmlcov/
 *.py,cover
 
@@ -21,9 +22,10 @@ tmp/
 /deploy/
 /examples/db/example.db
 /examples/tmp/
-/examples/var/logs/
+/examples/logs/
 /examples/media/cache/
 /examples/static/
+/examples/var/
 /builddocs/
 /builddocs.zip
 /build/

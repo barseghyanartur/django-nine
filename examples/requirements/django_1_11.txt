@@ -1,0 +1,5 @@
+-r base.txt
+
+#Django>=1.11,<2.0
+Django==1.11a1
+sqlparse==0.2.2

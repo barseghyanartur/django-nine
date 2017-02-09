@@ -7,7 +7,7 @@ try:
 except:
     readme = ''
 
-version = '0.1.11'
+version = '0.1.12'
 
 install_requires = [
     #'Django',
@@ -41,6 +41,7 @@ setup(
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
         "Environment :: Web Environment",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
         "License :: OSI Approved :: GNU Lesser General Public License v2 or "

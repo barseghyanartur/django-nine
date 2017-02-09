@@ -3,25 +3,30 @@ django-nine
 ===========
 `django-nine` - compatibility library for Django.
 
+Prerequisites
+=============
+- Python 2.6, 2.7, 3.4, 3.5 and 3.6.
+- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10 and 1.11.
+
 Installation
 ============
 Install latest stable version from PyPI:
 
-.. code-block:: text
+.. code-block:: sh
 
     pip install django-nine
 
 Or latest stable version from GitHub:
 
-.. code-block:: text
+.. code-block:: sh
 
-    pip install -e https://github.com/barseghyanartur/django-nine/archive/stable.zip
+    pip install https://github.com/barseghyanartur/django-nine/archive/stable.zip
 
 Or latest stable version from BitBucket:
 
-.. code-block:: text
+.. code-block:: sh
 
-    pip install -e https://bitbucket.org/barseghyanartur/django-nine/get/stable.zip
+    pip install https://bitbucket.org/barseghyanartur/django-nine/get/stable.zip
 
 Usage
 =====
@@ -53,19 +58,19 @@ Simply type:
 
     ./runtests.py
 
-or use tox:
+Or use tox:
 
 .. code-block:: sh
 
     tox
 
-or use tox to check specific env:
+Or use tox to check specific env:
 
 .. code-block:: sh
 
     tox -e py35
 
-or run Django tests:
+Or run Django tests:
 
 .. code-block:: sh
 

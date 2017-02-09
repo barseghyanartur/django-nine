@@ -38,6 +38,6 @@ else:
 
 __title__ = 'nine.user'
 __author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
-__copyright__ = 'Copyright (c) 2015-2016 Artur Barseghyan'
+__copyright__ = 'Copyright (c) 2015-2017 Artur Barseghyan'
 __license__ = 'GPL 2.0/LGPL 2.1'
 __all__ = ('User',)

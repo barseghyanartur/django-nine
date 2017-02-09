@@ -7,7 +7,8 @@ syntax: regexp
 \.travis\.yml~
 \.idea/
 \.cache/
-\.coverage
+\.coverage$
+\ghostdriver\.log
 ^htmlcov/
 \.py,cover
 

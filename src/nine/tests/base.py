@@ -2,7 +2,7 @@ import logging
 
 __title__ = 'nine.tests.base'
 __author__ = 'Artur Barseghyan'
-__copyright__ = 'Copyright (c) 2015-2016 Artur Barseghyan'
+__copyright__ = 'Copyright (c) 2015-2017 Artur Barseghyan'
 __license__ = 'GPL 2.0/LGPL 2.1'
 __all__ = (
     'LOG_INFO',

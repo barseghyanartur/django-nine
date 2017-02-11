@@ -89,17 +89,17 @@ Author
 Artur Barseghyan <artur.barseghyan@gmail.com>
 
 Documentation!
-===============================================
+==============
 
 Contents:
 
 .. toctree::
    :maxdepth: 20
 
-   dash
+   nine
 
 Indices and tables
-===============================================
+==================
 
 * :ref:`genindex`
 * :ref:`modindex`

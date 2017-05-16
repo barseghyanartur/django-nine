@@ -15,6 +15,12 @@ are used for versioning (schema follows below):
   0.3.2 to 0.4).
 - All backwards incompatible changes are mentioned in this document.
 
+0.1.13
+------
+2017-05-16
+
+- Added context processor using versions in templates.
+
 0.1.12
 ------
 2017-02-09

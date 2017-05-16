@@ -30,6 +30,10 @@ Or latest stable version from BitBucket:
 
 Usage
 =====
+Get Django versions
+-------------------
+In code
+~~~~~~~
 For example, if Django version installed in your environment is 1.7.4, then
 the following would be true.
 
@@ -44,6 +48,25 @@ the following would be true.
     versions.DJANGO_GTE_1_4  # True
     versions.DJANGO_LTE_1_6  # False
 
+In templates
+~~~~~~~~~~~~
+With use of context processors
+##############################
+Add ``nine.context_processors.versions`` to your context processors.
+
+.. code-block:: python
+
+    TEMPLATES[0]['OPTIONS']['context_processors'] += \
+        ['nine.context_processors.versions']
+
+Or if you are using an old version of Django:
+
+.. code-block:: python
+
+    TEMPLATE_CONTEXT_PROCESSORS += ['nine.context_processors.versions']
+
+Import User model
+-----------------
 Or you could safely import the user model as follows:
 
 .. code-block:: python

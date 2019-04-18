@@ -1,0 +1,52 @@
+language: python
+
+sudo: false
+
+matrix:
+  fast_finish: true
+  include:
+  # django22 and django-master can only be installed into xenial images
+    - python: 3.7
+      dist: xenial
+      sudo: true
+    - python: 3.6
+      env: DIST=trusty
+    - python: 3.6
+      dist: xenial
+      sudo: true
+      env: DIST=xenial
+    - python: 2.7
+    - python: 3.5
+    - python: 3.4
+    # tox and tox-travis refuse to run on Python 3.3
+    # Also various versions of Django on Python 3.3 are reporting
+    # django/utils/html_parser.py: AttributeError: module 'html.parser' has no attribute 'HTMLParseError'
+    - python: 3.5
+      env: TOX_ENV=py35-django22
+      install: pip install tox
+      dist: xenial
+      sudo: true
+    - python: 3.6
+      env: TOX_ENV=py36-django22
+      install: pip install tox
+      dist: xenial
+      sudo: true
+    - python: 3.6
+      env: TOX_ENV=py36-django-master
+      install: pip install tox
+      dist: xenial
+      sudo: true
+    - python: 3.7
+      env: TOX_ENV=py37-django-master
+      install: pip install tox
+      dist: xenial
+      sudo: true
+  allow_failures:
+    - env: TOX_ENV=py36-django-master
+    - env: TOX_ENV=py37-django-master
+
+install:
+  - pip install tox-travis
+
+script:
+  - tox

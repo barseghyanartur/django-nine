@@ -11,6 +11,7 @@ syntax: regexp
 \ghostdriver\.log
 ^htmlcov/
 \.py,cover
+\.pytest_cache/
 
 ^MANIFEST\.in~
 ^tmp/

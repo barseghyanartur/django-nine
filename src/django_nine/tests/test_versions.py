@@ -14,7 +14,7 @@ import django
 
 from .base import log_info
 
-__title__ = 'nine.tests.test_versions'
+__title__ = 'django_nine.tests.test_versions'
 __author__ = 'Artur Barseghyan'
 __copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
 __license__ = 'GPL 2.0/LGPL 2.1'
@@ -23,7 +23,7 @@ __all__ = ('VersionsTest',)
 
 class VersionsTest(unittest.TestCase):
     """
-    Tests of ``nine.versions`` module.
+    Tests of ``django_nine.versions`` module.
     """
     def setUp(self):
         pass
@@ -34,7 +34,7 @@ class VersionsTest(unittest.TestCase):
         """
         Tests as if we were using Django==1.4.21.
         """
-        from nine import versions
+        from django_nine import versions
         reload(versions)
 
         # Exact version matching
@@ -67,7 +67,7 @@ class VersionsTest(unittest.TestCase):
         """
         Tests as if we were using Django==1.5.5.
         """
-        from nine import versions
+        from django_nine import versions
         reload(versions)
 
         # Exact version matching
@@ -100,7 +100,7 @@ class VersionsTest(unittest.TestCase):
         """
         Tests as if we were using Django==1.6.5.
         """
-        from nine import versions
+        from django_nine import versions
         reload(versions)
 
         # Exact version matching
@@ -133,7 +133,7 @@ class VersionsTest(unittest.TestCase):
         """
         Tests as if we were using Django==1.7.5.
         """
-        from nine import versions
+        from django_nine import versions
         reload(versions)
 
         # Exact version matching
@@ -166,7 +166,7 @@ class VersionsTest(unittest.TestCase):
         """
         Tests as if we were using Django==1.8.a1.
         """
-        from nine import versions
+        from django_nine import versions
         reload(versions)
 
         # Exact version matching
@@ -199,7 +199,7 @@ class VersionsTest(unittest.TestCase):
         """
         Tests as if we were using Django==1.10.
         """
-        from nine import versions
+        from django_nine import versions
         reload(versions)
 
         # Exact version matching

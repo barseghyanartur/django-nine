@@ -80,7 +80,7 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': False,
         },
-        'nine': {
+        'django_nine': {
             'handlers': ['console', 'nine_log'],
             'level': 'ERROR',
             'propagate': True,

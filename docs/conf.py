@@ -23,10 +23,10 @@ sys.path.insert(0, os.path.abspath('../src'))
 sys.path.insert(0, os.path.abspath('../examples'))
 sys.path.insert(0, os.path.abspath('../examples/example'))
 try:
-    import nine
-    version = nine.__version__
-    project = nine.__title__
-    copyright = nine.__copyright__
+    import django_nine
+    version = django_nine.__version__
+    project = django_nine.__title__
+    copyright = django_nine.__copyright__
 except Exception as e:
     version = '0.1'
     project = u'django-nine'
@@ -58,7 +58,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-#project = u'django-nine'
+#project = u'django-django_nine'
 #copyright = u'2015, Artur Barseghyan <artur.barseghyan@gmail.com>'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -212,7 +212,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'django-nine.tex', u'django-nineDocumentation',
+  ('index', 'django-django_nine.tex', u'django-nineDocumentation',
    u'Artur Barseghyan \\textless{}artur.barseghyan@gmail.com\\textgreater{}', 'manual'),
 ]
 
@@ -242,7 +242,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'django-nine', u'django-nine Documentation',
+    ('index', 'django-django_nine', u'django-django_nine Documentation',
      [u'Artur Barseghyan <artur.barseghyan@gmail.com>'], 1)
 ]
 
@@ -256,8 +256,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'django-nine', u'django-nine Documentation',
-   u'Artur Barseghyan <artur.barseghyan@gmail.com>', 'django-nine', 'Compatibility library for Django.',
+  ('index', 'django-django_nine', u'django-django_nine Documentation',
+   u'Artur Barseghyan <artur.barseghyan@gmail.com>', 'django-django_nine', 'Compatibility library for Django.',
    'Miscellaneous'),
 ]
 
@@ -277,13 +277,13 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'django-nine'
+epub_title = u'django-django_nine'
 epub_author = u'Artur Barseghyan <artur.barseghyan@gmail.com>'
 epub_publisher = u'Artur Barseghyan <artur.barseghyan@gmail.com>'
 epub_copyright = u'2015, Artur Barseghyan <artur.barseghyan@gmail.com>'
 
 # The basename for the epub file. It defaults to the project name.
-#epub_basename = u'django-nine'
+#epub_basename = u'django-django_nine'
 
 # The HTML theme for the epub output. Since the default themes are not optimized
 # for small screen space, using the same theme for HTML and epub output is

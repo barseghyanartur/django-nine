@@ -1,0 +1,4 @@
+-r base.txt
+
+Django>=2.1,<2.2
+sqlparse>=0.2.2

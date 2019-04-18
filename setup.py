@@ -7,7 +7,7 @@ try:
 except:
     readme = ''
 
-version = '0.1.13'
+version = '0.2'
 
 install_requires = [
     #'Django',

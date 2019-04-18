@@ -11,6 +11,7 @@ ghostdriver.log
 /.cache/
 /htmlcov/
 *.py,cover
+.pytest_cache/
 
 MANIFEST.in~
 tmp/

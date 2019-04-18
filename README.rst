@@ -1,12 +1,12 @@
 ===========
 django-nine
 ===========
-`django-nine` - compatibility library for Django.
+`django-nine` - version checking library for Django.
 
 Prerequisites
 =============
-- Python 2.6, 2.7, 3.4, 3.5 and 3.6.
-- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10 and 1.11.
+- Python 2.6, 2.7, 3.4, 3.5, 3.6 and 3.7.
+- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1 and 2.2.
 
 Installation
 ============
@@ -39,7 +39,7 @@ the following would be true.
 
 .. code-block:: python
 
-    from nine import versions
+    from django_nine import versions
 
     versions.DJANGO_1_7  # True
     versions.DJANGO_LTE_1_7  # True
@@ -57,21 +57,13 @@ Add ``nine.context_processors.versions`` to your context processors.
 .. code-block:: python
 
     TEMPLATES[0]['OPTIONS']['context_processors'] += \
-        ['nine.context_processors.versions']
+        ['django_nine.context_processors.versions']
 
 Or if you are using an old version of Django:
 
 .. code-block:: python
 
-    TEMPLATE_CONTEXT_PROCESSORS += ['nine.context_processors.versions']
-
-Import User model
------------------
-Or you could safely import the user model as follows:
-
-.. code-block:: python
-
-    from nine.user import User
+    TEMPLATE_CONTEXT_PROCESSORS += ['django_nine.context_processors.versions']
 
 Testing
 =======
@@ -91,7 +83,7 @@ Or use tox to check specific env:
 
 .. code-block:: sh
 
-    tox -e py35
+    tox -e py37
 
 Or run Django tests:
 

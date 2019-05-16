@@ -32,7 +32,7 @@ except:
 setup(
     name='django-nine',
     version=version,
-    description="Compatibility library for Django.",
+    description="Version checking library.",
     long_description="{0}".format(readme),
     classifiers=[
         "Programming Language :: Python :: 2.6",
@@ -42,6 +42,7 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
         "Environment :: Web Environment",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
         "License :: OSI Approved :: GNU Lesser General Public License v2 or "
@@ -57,7 +58,7 @@ setup(
     url='https://github.com/barseghyanartur/django-nine/',
     package_dir={'': 'src'},
     packages=find_packages(where='./src'),
-    license='GPL 2.0/LGPL 2.1',
+    license='GPL-2.0-only OR LGPL-2.1-or-later',
     install_requires=install_requires,
     tests_require=tests_require,
     package_data={},

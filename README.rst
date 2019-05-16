@@ -3,6 +3,18 @@ django-nine
 ===========
 `django-nine` - version checking library for Django.
 
+.. image:: https://img.shields.io/pypi/v/django-nine.svg
+   :target: https://pypi.python.org/pypi/django-nine
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/travis/barseghyanartur/django-nine/master.svg
+   :target: http://travis-ci.org/barseghyanartur/django-nine
+   :alt: Build Status
+
+.. image:: https://img.shields.io/badge/license-GPL--2.0--only%20OR%20LGPL--2.1--or--later-blue.svg
+   :target: https://github.com/barseghyanartur/django-nine/#License
+   :alt: GPL-2.0-only OR LGPL-2.1-or-later
+
 Prerequisites
 =============
 - Python 2.6, 2.7, 3.4, 3.5, 3.6 and 3.7.
@@ -93,7 +105,7 @@ Or run Django tests:
 
 License
 =======
-GPL 2.0/LGPL 2.1
+GPL-2.0-only OR LGPL-2.1-or-later
 
 Support
 =======

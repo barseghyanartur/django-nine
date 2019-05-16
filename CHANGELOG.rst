@@ -17,14 +17,16 @@ are used for versioning (schema follows below):
 
 0.2
 ---
+2019-05-16
 
 .. note::
 
-    This release is backwards-incompatible with previous version, mostly
-    due to the namespace change: `nine` becomes `django_nine`.
+    This release is still backwards-compatible with previous versions (0.1.x),
+    but next versions (0.3.x) would not be.
 
 - Change namespace from `nine` to `django_nine`.
 - Removed `user` compatibility module. Implement your own if you need.
+- Add travis.
 
 0.1.13
 ------

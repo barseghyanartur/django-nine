@@ -17,7 +17,7 @@ from .base import log_info
 __title__ = 'django_nine.tests.test_versions'
 __author__ = 'Artur Barseghyan'
 __copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
+__license__ = 'GPL-2.0-only OR LGPL-2.1-or-later'
 __all__ = ('VersionsTest',)
 
 

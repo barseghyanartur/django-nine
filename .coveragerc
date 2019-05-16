@@ -1,5 +1,6 @@
 [run]
 omit =
+    src/nine/
     src/django_nine/tests/*
     example/simple/settings/*
     example/simple/wsgi.py

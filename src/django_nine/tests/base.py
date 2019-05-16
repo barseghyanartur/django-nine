@@ -3,7 +3,7 @@ import logging
 __title__ = 'django_nine.tests.base'
 __author__ = 'Artur Barseghyan'
 __copyright__ = '2015-2019 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
+__license__ = 'GPL-2.0-only OR LGPL-2.1-or-later'
 __all__ = (
     'LOG_INFO',
     'log_info',

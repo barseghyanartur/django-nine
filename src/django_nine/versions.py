@@ -10,7 +10,7 @@ import django
 __title__ = 'django_nine.versions'
 __author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
 __copyright__ = '2015-2019 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
+__license__ = 'GPL-2.0-only OR LGPL-2.1-or-later'
 __all__ = [
     'LOOSE_DJANGO_VERSION', 'LOOSE_DJANGO_MINOR_VERSION',
 ]

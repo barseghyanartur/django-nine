@@ -1,5 +1,6 @@
+pytest>=3.0.2
+
 -r base.txt
 
-#Django>=1.11,<2.0
-Django==1.11a1
+Django>=1.11,<2.0
 sqlparse==0.2.2

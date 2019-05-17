@@ -14,82 +14,116 @@ matrix:
   include:
     - env: TOX_ENV=py27-django15
       python: 2.7
+      dist: trusty
     - env: TOX_ENV=py34-django15
       python: 3.4
+      dist: trusty
 
     - env: TOX_ENV=py27-django16
       python: 2.7
+      dist: trusty
     - env: TOX_ENV=py34-django16
       python: 3.4
+      dist: trusty
 
     - env: TOX_ENV=py27-django17
       python: 2.7
+      dist: trusty
     - env: TOX_ENV=py34-django17
       python: 3.4
+      dist: trusty
 
     - env: TOX_ENV=py27-django18
       python: 2.7
+      dist: trusty
     - env: TOX_ENV=py34-django18
       python: 3.4
+      dist: trusty
     - env: TOX_ENV=py35-django18
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-django18
       python: 3.6
+      dist: xenial
 
     - env: TOX_ENV=py27-django19
       python: 2.7
+      dist: trusty
     - env: TOX_ENV=py34-django19
       python: 3.4
+      dist: trusty
     - env: TOX_ENV=py35-django19
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-django19
       python: 3.6
+      dist: xenial
 
     - env: TOX_ENV=py27-django110
       python: 2.7
+      dist: trusty
     - env: TOX_ENV=py34-django110
       python: 3.4
+      dist: trusty
     - env: TOX_ENV=py35-django110
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-django110
       python: 3.6
+      dist: xenial
 
     - env: TOX_ENV=py27-django111
       python: 2.7
+      dist: trusty
     - env: TOX_ENV=py34-django111
       python: 3.4
+      dist: trusty
     - env: TOX_ENV=py35-django111
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-django111
       python: 3.6
+      dist: xenial
 
     - env: TOX_ENV=py35-django20
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-django20
       python: 3.6
+      dist: xenial
     - env: TOX_ENV=py37-django20
       python: 3.7
+      dist: xenial
 
     - env: TOX_ENV=py35-django21
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-django21
       python: 3.6
+      dist: xenial
     - env: TOX_ENV=py37-django21
       python: 3.7
+      dist: xenial
 
     - env: TOX_ENV=py35-django22
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-django22
       python: 3.6
+      dist: xenial
     - env: TOX_ENV=py37-django22
       python: 3.7
+      dist: xenial
 
     - env: TOX_ENV=py35-djangomaster
       python: 3.5
+      dist: xenial
     - env: TOX_ENV=py36-djangomaster
       python: 3.6
+      dist: xenial
     - env: TOX_ENV=py37-djangomaster
       python: 3.7
+      dist: xenial
 
 #  # django22 and django-master can only be installed into xenial images
 #    - python: 3.7

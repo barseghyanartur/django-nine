@@ -171,4 +171,4 @@ install:
   - pip install tox-travis
 
 script:
-  - tox
+  - tox -e $TOX_ENV

@@ -17,7 +17,7 @@ are used for versioning (schema follows below):
 
 0.2
 ---
-2019-05-16
+2019-05-17
 
 .. note::
 

@@ -1,12 +1,24 @@
 ===========
 django-nine
 ===========
-`django-nine` - compatibility library for Django.
+`django-nine` - version checking library for Django.
+
+.. image:: https://img.shields.io/pypi/v/django-nine.svg
+   :target: https://pypi.python.org/pypi/django-nine
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/travis/barseghyanartur/django-nine/master.svg
+   :target: http://travis-ci.org/barseghyanartur/django-nine
+   :alt: Build Status
+
+.. image:: https://img.shields.io/badge/license-GPL--2.0--only%20OR%20LGPL--2.1--or--later-blue.svg
+   :target: https://github.com/barseghyanartur/django-nine/#License
+   :alt: GPL-2.0-only OR LGPL-2.1-or-later
 
 Prerequisites
 =============
-- Python 2.6, 2.7, 3.4, 3.5 and 3.6.
-- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10 and 1.11.
+- Python 2.6, 2.7, 3.4, 3.5, 3.6 and 3.7.
+- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1 and 2.2.
 
 Installation
 ============
@@ -30,12 +42,16 @@ Or latest stable version from BitBucket:
 
 Usage
 =====
+Get Django versions
+-------------------
+In code
+~~~~~~~
 For example, if Django version installed in your environment is 1.7.4, then
 the following would be true.
 
 .. code-block:: python
 
-    from nine import versions
+    from django_nine import versions
 
     versions.DJANGO_1_7  # True
     versions.DJANGO_LTE_1_7  # True
@@ -44,11 +60,22 @@ the following would be true.
     versions.DJANGO_GTE_1_4  # True
     versions.DJANGO_LTE_1_6  # False
 
-Or you could safely import the user model as follows:
+In templates
+~~~~~~~~~~~~
+With use of context processors
+##############################
+Add ``nine.context_processors.versions`` to your context processors.
 
 .. code-block:: python
 
-    from nine.user import User
+    TEMPLATES[0]['OPTIONS']['context_processors'] += \
+        ['django_nine.context_processors.versions']
+
+Or if you are using an old version of Django:
+
+.. code-block:: python
+
+    TEMPLATE_CONTEXT_PROCESSORS += ['django_nine.context_processors.versions']
 
 Testing
 =======
@@ -68,7 +95,7 @@ Or use tox to check specific env:
 
 .. code-block:: sh
 
-    tox -e py35
+    tox -e py37
 
 Or run Django tests:
 
@@ -78,7 +105,7 @@ Or run Django tests:
 
 License
 =======
-GPL 2.0/LGPL 2.1
+GPL-2.0-only OR LGPL-2.1-or-later
 
 Support
 =======

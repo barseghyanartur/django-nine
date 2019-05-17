@@ -42,6 +42,7 @@ matrix:
       dist: xenial
       sudo: true
   allow_failures:
+    - env: TOX_ENV=py35-django-master
     - env: TOX_ENV=py36-django-master
     - env: TOX_ENV=py37-django-master
 

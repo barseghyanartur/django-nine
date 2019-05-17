@@ -24,6 +24,7 @@ are used for versioning (schema follows below):
     This release is still backwards-compatible with previous versions (0.1.x),
     but next versions (0.3.x) would not be.
 
+- Drop Python 2.6 support.
 - Change namespace from `nine` to `django_nine`.
 - Removed `user` compatibility module. Implement your own if you need.
 - Add travis.

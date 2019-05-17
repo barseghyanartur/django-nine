@@ -4,5 +4,4 @@ pytest-cov==2.6.1
 
 -r base.txt
 
-Django>=1.11,<2.0
-sqlparse==0.2.2
+https://github.com/django/django/archive/master.tar.gz

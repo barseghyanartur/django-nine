@@ -163,9 +163,9 @@ matrix:
 #      sudo: true
 
   allow_failures:
-    - env: TOX_ENV=py35-django-master
-    - env: TOX_ENV=py36-django-master
-    - env: TOX_ENV=py37-django-master
+    - env: TOX_ENV=py35-djangomaster
+    - env: TOX_ENV=py36-djangomaster
+    - env: TOX_ENV=py37-djangomaster
 
 install:
   - pip install tox-travis

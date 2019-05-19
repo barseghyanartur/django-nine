@@ -16,7 +16,7 @@ are used for versioning (schema follows below):
 - All backwards incompatible changes are mentioned in this document.
 
 0.2.2
----
+-----
 2019-05-18
 
 - Bring back the `user` compatibility module. However, it's deprecated and
@@ -24,7 +24,7 @@ are used for versioning (schema follows below):
 - Show deprecation warnings.
 
 0.2.1
----
+-----
 2019-05-18
 
 - Fixes in backwards compatibility.

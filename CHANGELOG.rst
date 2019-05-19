@@ -15,6 +15,14 @@ are used for versioning (schema follows below):
   0.3.2 to 0.4).
 - All backwards incompatible changes are mentioned in this document.
 
+0.2.2
+---
+2019-05-18
+
+- Bring back the `user` compatibility module. However, it's deprecated and
+  will be removed in version 0.3.
+- Show deprecation warnings.
+
 0.2.1
 ---
 2019-05-18

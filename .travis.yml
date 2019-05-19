@@ -167,8 +167,8 @@ matrix:
     - env: TOX_ENV=py36-djangomaster
     - env: TOX_ENV=py37-djangomaster
 
-#install:
-#  - pip install tox-travis
+install:
+  - pip install tox-travis
 
 script:
   - tox -e $TOX_ENV

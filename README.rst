@@ -28,6 +28,11 @@ Prerequisites
 - Python 2.6, 2.7, 3.4, 3.5, 3.6 and 3.7.
 - Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1 and 2.2.
 
+Documentation
+=============
+Documentation is available on `Read the Docs
+<http://django-nine.readthedocs.io/>`_.
+
 Installation
 ============
 Install latest stable version from PyPI:

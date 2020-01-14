@@ -13,4 +13,3 @@ pydocstyle
 pylint
 flake8
 isort
-pre-commit

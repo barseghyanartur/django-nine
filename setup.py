@@ -52,6 +52,13 @@ setup(
         "Operating System :: OS Independent",
         "Development Status :: 4 - Beta",
     ],
+    project_urls={
+        "Bug Tracker": "https://github.com/barseghyanartur/django-nine/issues",
+        "Documentation": "https://django-nine.readthedocs.io/",
+        "Source Code": "https://github.com/barseghyanartur/django-nine",
+        "Changelog": "https://django-nine.readthedocs.io/"
+                     "en/latest/changelog.html",
+    },
     keywords='django, compatibility',
     author='Artur Barseghyan',
     author_email='artur.barseghyan@gmail.com',

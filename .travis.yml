@@ -127,6 +127,16 @@ matrix:
       python: 3.8
       dist: xenial
 
+    - env: TOX_ENV=py36-django31
+      python: 3.6
+      dist: xenial
+    - env: TOX_ENV=py37-django31
+      python: 3.7
+      dist: xenial
+    - env: TOX_ENV=py38-django31
+      python: 3.8
+      dist: xenial
+
     - env: TOX_ENV=py36-djangomaster
       python: 3.6
       dist: xenial

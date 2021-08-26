@@ -1,0 +1,9 @@
+# pytest==3.0.2 or pytest>=3.0.2 depends on Django version
+# and is set in those requirements files
+
+
+factory_boy
+Faker
+
+
+tox

@@ -1,0 +1,7 @@
+pytest==6.2.4
+pytest-django==4.4.0
+pytest-cov==2.6.1
+
+-r base.in
+
+Django>=3.2,<3.3

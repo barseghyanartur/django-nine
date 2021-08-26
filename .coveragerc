@@ -1,4 +1,5 @@
 [run]
+relative_files = True
 omit =
     src/nine/
     src/django_nine/user.py

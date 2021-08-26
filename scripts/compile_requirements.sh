@@ -31,6 +31,9 @@ pip-compile django_1_10.in "$@"
 echo "pip-compile django_1_11.in"
 pip-compile django_1_11.in "$@"
 
+echo "pip-compile django_2_0.in"
+pip-compile django_2_0.in "$@"
+
 echo "pip-compile django_2_1.in"
 pip-compile django_2_1.in "$@"
 

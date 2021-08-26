@@ -3,8 +3,8 @@ Jinja2
 MarkupSafe
 Sphinx
 docutils
-ipdb
-ipython
+ipdb==0.8
+ipython==7.0.1
 selenium
 simple-timer>=0.2
 

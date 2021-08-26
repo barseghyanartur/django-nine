@@ -1,0 +1,11 @@
+
+# Style checkers
+black
+check-manifest
+check-manifest
+flake8
+isort
+pre-commit
+pydocstyle
+pylint
+restview

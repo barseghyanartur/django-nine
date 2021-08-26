@@ -4,6 +4,10 @@
 
 factory_boy
 Faker
-
+mock
 
 tox
+
+beautifulsoup4
+selenium
+simple-timer>=0.2

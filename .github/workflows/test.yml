@@ -74,6 +74,8 @@ jobs:
         pip install pip-tools
         pip-compile examples/requirements/${{ matrix.requirements }}.in
         pip install -r examples/requirements/${{ matrix.requirements }}.in
+        pip-compile examples/requirements/testing.in
+        pip install -r examples/requirements/testing.txt
     - name: Run Tests
       run: tox -e ${{ matrix.tox_env }}
     - name: Coveralls

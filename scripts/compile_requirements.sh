@@ -7,6 +7,9 @@ pip-compile base.in "$@"
 echo "pip-compile common.in"
 pip-compile common.in "$@"
 
+echo "pip-compile debug.in"
+pip-compile debug.in "$@"
+
 echo "pip-compile django_1_4.in"
 pip-compile django_1_4.in "$@"
 
@@ -51,6 +54,12 @@ pip-compile django_3_2.in "$@"
 
 echo "pip-compile django_master.in"
 pip-compile django_master.in "$@"
+
+echo "pip-compile docs.in"
+pip-compile docs.in "$@"
+
+echo "pip-compile style_checkers.in"
+pip-compile style_checkers.in "$@"
 
 echo "pip-compile testing.in"
 pip-compile testing.in "$@"

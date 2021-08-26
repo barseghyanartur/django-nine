@@ -3,5 +3,6 @@ pytest-django==4.4.0
 pytest-cov==2.6.1
 
 -r base.in
+-r testing.in
 
 https://github.com/django/django/archive/refs/heads/main.zip

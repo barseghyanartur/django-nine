@@ -3,6 +3,7 @@ pytest-django==3.4.8
 pytest-cov==2.6.1
 
 -r base.in
+-r testing.in
 
 Django>=2.1,<2.2
 sqlparse>=0.2.2

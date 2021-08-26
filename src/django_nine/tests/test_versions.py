@@ -1,5 +1,6 @@
 import unittest
 import mock
+
 # For Python3 >= 3.4
 try:
     from importlib import reload
@@ -12,27 +13,29 @@ except ImportError as err:
 
 from .base import log_info
 
-__title__ = 'django_nine.tests.test_versions'
-__author__ = 'Artur Barseghyan'
-__copyright__ = 'Copyright (c) 2015 Artur Barseghyan'
-__license__ = 'GPL-2.0-only OR LGPL-2.1-or-later'
-__all__ = ('VersionsTest',)
+__title__ = "django_nine.tests.test_versions"
+__author__ = "Artur Barseghyan"
+__copyright__ = "Copyright (c) 2015 Artur Barseghyan"
+__license__ = "GPL-2.0-only OR LGPL-2.1-or-later"
+__all__ = ("VersionsTest",)
 
 
 class VersionsTest(unittest.TestCase):
     """
     Tests of ``django_nine.versions`` module.
     """
+
     def setUp(self):
         pass
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='1.4.21'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="1.4.21"))
     def test_django_1_4_21(self):
         """
         Tests as if we were using Django==1.4.21.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -60,12 +63,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_1_9)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='1.5.5'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="1.5.5"))
     def test_django_1_5_5(self):
         """
         Tests as if we were using Django==1.5.5.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -93,12 +97,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_1_9)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='1.6.5'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="1.6.5"))
     def test_django_1_6_5(self):
         """
         Tests as if we were using Django==1.6.5.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -126,12 +131,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_1_9)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='1.7.5'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="1.7.5"))
     def test_django_1_7_5(self):
         """
         Tests as if we were using Django==1.7.5.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -159,12 +165,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_1_9)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='1.8.a1'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="1.8.a1"))
     def test_django_1_8_a1(self):
         """
         Tests as if we were using Django==1.8.a1.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -192,12 +199,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_1_9)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='1.10'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="1.10"))
     def test_django_1_10(self):
         """
         Tests as if we were using Django==1.10.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -227,12 +235,13 @@ class VersionsTest(unittest.TestCase):
         self.assertTrue(versions.DJANGO_GTE_1_10)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='1.11'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="1.11"))
     def test_django_1_11(self):
         """
         Tests as if we were using Django==1.11.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -278,12 +287,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_3_0)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='2.0'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="2.0"))
     def test_django_2_0(self):
         """
         Tests as if we were using Django==2.0.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -329,12 +339,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_3_0)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='2.1'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="2.1"))
     def test_django_2_1(self):
         """
         Tests as if we were using Django==2.1.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -380,12 +391,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_3_0)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='2.2'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="2.2"))
     def test_django_2_2(self):
         """
         Tests as if we were using Django==2.2.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching
@@ -431,12 +443,13 @@ class VersionsTest(unittest.TestCase):
         self.assertFalse(versions.DJANGO_GTE_3_0)
 
     @log_info
-    @mock.patch('django.get_version', mock.MagicMock(return_value='3.0'))
+    @mock.patch("django.get_version", mock.MagicMock(return_value="3.0"))
     def test_django_3_0(self):
         """
         Tests as if we were using Django==3.0.
         """
         from django_nine import versions
+
         reload(versions)
 
         # Exact version matching

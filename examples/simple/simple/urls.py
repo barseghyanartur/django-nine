@@ -6,8 +6,8 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'simple.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url('^/$',
-        view=TemplateView.as_view(template_name="nine.html"),
-        name='django_nine'),
+    url(
+        "^/$", view=TemplateView.as_view(template_name="nine.html"), name="django_nine"
+    ),
     # url(r'^admin/', include(admin.site.urls)),
 ]

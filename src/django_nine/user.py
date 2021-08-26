@@ -14,7 +14,7 @@ if DJANGO_LTE_1_4:
     from django.contrib.auth.models import User
 else:
     # Cannot use contrib.auth.get_user_model() at compile time.
-    user_app_name, user_model_name = settings.AUTH_USER_MODEL.rsplit('.', 1)
+    user_app_name, user_model_name = settings.AUTH_USER_MODEL.rsplit(".", 1)
     User = None
 
     if DJANGO_LTE_1_6:
@@ -25,6 +25,7 @@ else:
                 break
     elif DJANGO_GTE_1_7:
         from django.apps import apps
+
         try:
             User = apps.get_registered_model(user_app_name, user_model_name)
         except KeyError:
@@ -37,15 +38,15 @@ else:
             "".format(settings.AUTH_USER_MODEL, user_app_name)
         )
 
-__title__ = 'nine.user'
-__author__ = 'Artur Barseghyan <artur.barseghyan@gmail.com>'
-__copyright__ = 'Copyright (c) 2015-2017 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
-__all__ = ('User',)
+__title__ = "nine.user"
+__author__ = "Artur Barseghyan <artur.barseghyan@gmail.com>"
+__copyright__ = "Copyright (c) 2015-2017 Artur Barseghyan"
+__license__ = "GPL 2.0/LGPL 2.1"
+__all__ = ("User",)
 
 
 warnings.warn(
     "The `django_nine.user` module is deprecated and will be removed in "
     "version 0.3.",
-    DeprecationWarning
+    DeprecationWarning,
 )

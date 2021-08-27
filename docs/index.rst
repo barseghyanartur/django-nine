@@ -26,7 +26,7 @@ django-nine
 Prerequisites
 =============
 - Python 2.6, 2.7, 3.4, 3.5, 3.6, 3.7 and 3.8.
-- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1, 2.2, 3.0 and 3.1.
+- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1, 2.2, 3.0, 3.1 and 3.2.
 
 Documentation
 =============
@@ -46,12 +46,6 @@ Or latest stable version from GitHub:
 .. code-block:: sh
 
     pip install https://github.com/barseghyanartur/django-nine/archive/stable.zip
-
-Or latest stable version from BitBucket:
-
-.. code-block:: sh
-
-    pip install https://bitbucket.org/barseghyanartur/django-nine/get/stable.zip
 
 Usage
 =====

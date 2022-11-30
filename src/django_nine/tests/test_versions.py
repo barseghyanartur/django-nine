@@ -15,7 +15,7 @@ from .base import log_info
 
 __title__ = "django_nine.tests.test_versions"
 __author__ = "Artur Barseghyan"
-__copyright__ = "Copyright (c) 2015 Artur Barseghyan"
+__copyright__ = "2015-2022 Artur Barseghyan"
 __license__ = "GPL-2.0-only OR LGPL-2.1-or-later"
 __all__ = ("VersionsTest",)
 
@@ -173,7 +173,7 @@ class VersionsTest(unittest.TestCase):
         from django_nine import versions
 
         reload(versions)
-
+        # import ipdb; ipdb.set_trace()
         # Exact version matching
         self.assertFalse(versions.DJANGO_1_4)
         self.assertFalse(versions.DJANGO_1_5)

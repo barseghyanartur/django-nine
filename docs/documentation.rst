@@ -7,7 +7,8 @@ Contents:
 .. toctree::
    :maxdepth: 20
 
-   nine
+   django_nine
+   changelog
 
 Indices and tables
 ==================

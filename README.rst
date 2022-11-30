@@ -25,8 +25,9 @@ django-nine
 
 Prerequisites
 =============
-- Python 2.6, 2.7, 3.4, 3.5, 3.6, 3.7 and 3.8.
-- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1, 2.2, 3.0, 3.1 and 3.2.
+- Python 2.6, 2.7, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9 and 3.10.
+- Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1, 2.2, 3.0, 3.1, 3.2,
+  4.0 and 4.1.
 
 Documentation
 =============
@@ -116,7 +117,8 @@ GPL-2.0-only OR LGPL-2.1-or-later
 
 Support
 =======
-For any issues contact me at the e-mail given in the `Author`_ section.
+For any security issues contact me at the e-mail given in the `Author`_ section.
+For overall issues, go to `GitHub <https://github.com/barseghyanartur/django-nine/issues>`_.
 
 Author
 ======

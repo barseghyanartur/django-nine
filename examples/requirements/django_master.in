@@ -1,6 +1,6 @@
-pytest==6.2.4
-pytest-django==4.4.0
-pytest-cov==2.6.1
+pytest
+pytest-django
+pytest-cov
 
 -r base.in
 -r testing.in

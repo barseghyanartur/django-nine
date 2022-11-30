@@ -62,6 +62,26 @@ jobs:
             requirements: django_3_2
             tox_env: py39-django32
 
+          - python-version: 3.8
+            requirements: django_4_0
+            tox_env: py38-django40
+          - python-version: 3.9
+            requirements: django_4_0
+            tox_env: py39-django40
+          - python-version: '3.10'
+            requirements: django_4_0
+            tox_env: py310-django40
+
+          - python-version: 3.8
+            requirements: django_4_1
+            tox_env: py38-django41
+          - python-version: 3.9
+            requirements: django_4_1
+            tox_env: py39-django41
+          - python-version: '3.10'
+            requirements: django_4_1
+            tox_env: py310-django41
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -77,6 +97,8 @@ jobs:
     - name: Run Tests
       run: tox -e ${{ matrix.tox_env }}
     - name: Coveralls
+      id: coveralls-setup
+      continue-on-error: true
       uses: AndreMiras/coveralls-python-action@develop
       with:
         parallel: true
@@ -87,6 +109,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Coveralls Finished
+      id: coveralls-finish
+      continue-on-error: true
+      if: strategy.steps.coveralls-setup.outcome == 'success'
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}

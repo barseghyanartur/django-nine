@@ -1,8 +1,8 @@
 from django_nine import versions as nine_versions
 
-__title__ = "django_nine.versions"
+__title__ = "django_nine.context_processors"
 __author__ = "Artur Barseghyan <artur.barseghyan@gmail.com>"
-__copyright__ = "2015-2020 Artur Barseghyan"
+__copyright__ = "2015-2022 Artur Barseghyan"
 __license__ = "GPL-2.0-only OR LGPL-2.1-or-later"
 __all__ = [
     "versions",

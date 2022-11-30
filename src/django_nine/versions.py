@@ -3,22 +3,25 @@ Contains information about the current Django version in use, including (LTE
 and GTE).
 """
 
-from distutils.version import LooseVersion
+from packaging.version import Version
 
 import django
 
 __title__ = "django_nine.versions"
 __author__ = "Artur Barseghyan <artur.barseghyan@gmail.com>"
-__copyright__ = "2015-2020 Artur Barseghyan"
+__copyright__ = "2015-2022 Artur Barseghyan"
 __license__ = "GPL-2.0-only OR LGPL-2.1-or-later"
 __all__ = [
     "LOOSE_DJANGO_VERSION",
     "LOOSE_DJANGO_MINOR_VERSION",
 ]
 
-LOOSE_DJANGO_VERSION = LooseVersion(django.get_version())
-LOOSE_DJANGO_MINOR_VERSION = LooseVersion(
-    ".".join([str(i) for i in LOOSE_DJANGO_VERSION.version[0:2]])
+LOOSE_DJANGO_VERSION = Version(django.get_version())
+LOOSE_DJANGO_MINOR_VERSION = Version(
+    "{major}.{minor}".format(
+        major=LOOSE_DJANGO_VERSION.major,
+        minor=LOOSE_DJANGO_VERSION.minor
+    )
 )
 
 # Loose versions
@@ -50,21 +53,16 @@ LOOSE_VERSIONS = (
 
 for v in LOOSE_VERSIONS:
     var_name = "LOOSE_VERSION_{0}".format(v.replace(".", "_"))
-    globals()[var_name] = LooseVersion(v)
+    globals()[var_name] = Version(v)
     __all__.append(var_name)
 
 # Exact versions
 EXACT_VERSIONS = LOOSE_VERSIONS[:-1]
 
 for i, v in enumerate(EXACT_VERSIONS):
-    l_cur = globals()[
-        "LOOSE_VERSION_{0}" "".format(LOOSE_VERSIONS[i].replace(".", "_"))
-    ]
-    l_nxt = globals()[
-        "LOOSE_VERSION_{0}" "".format(LOOSE_VERSIONS[i + 1].replace(".", "_"))
-    ]
+    l_cur = Version(v)
     var_name = "DJANGO_{0}".format(v.replace(".", "_"))
-    globals()[var_name] = l_cur <= LOOSE_DJANGO_VERSION < l_nxt
+    globals()[var_name] = (l_cur == LOOSE_DJANGO_MINOR_VERSION)
     __all__.append(var_name)
 
 # LTE list
@@ -75,7 +73,7 @@ for i, v in enumerate(EXACT_VERSIONS):
         "LOOSE_VERSION_{0}" "".format(LOOSE_VERSIONS[i].replace(".", "_"))
     ]
     var_name = "DJANGO_LTE_{0}".format(v.replace(".", "_"))
-    globals()[var_name] = LOOSE_DJANGO_MINOR_VERSION <= l_cur
+    globals()[var_name] = (LOOSE_DJANGO_MINOR_VERSION <= l_cur)
     __all__.append(var_name)
 
 # GTE list
@@ -86,7 +84,7 @@ for i, v in enumerate(EXACT_VERSIONS):
         "LOOSE_VERSION_{0}" "".format(LOOSE_VERSIONS[i].replace(".", "_"))
     ]
     var_name = "DJANGO_GTE_{0}".format(v.replace(".", "_"))
-    globals()[var_name] = LOOSE_DJANGO_MINOR_VERSION >= l_cur
+    globals()[var_name] = (LOOSE_DJANGO_MINOR_VERSION >= l_cur)
     __all__.append(var_name)
 
 __all__ = tuple(__all__)
@@ -101,5 +99,5 @@ try:
 except NameError:
     pass
 
-del LooseVersion
+del Version
 del django

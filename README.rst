@@ -11,8 +11,8 @@ django-nine
     :target: https://pypi.python.org/pypi/django-nine/
     :alt: Supported Python versions
 
-.. image:: https://img.shields.io/travis/barseghyanartur/django-nine/master.svg
-   :target: http://travis-ci.org/barseghyanartur/django-nine
+.. image:: https://github.com/barseghyanartur/django-nine/actions/workflows/test.yml/badge.svg
+   :target: https://github.com/barseghyanartur/django-nine/actions/workflows/test.yml
    :alt: Build Status
 
 .. image:: https://img.shields.io/badge/license-GPL--2.0--only%20OR%20LGPL--2.1--or--later-blue.svg

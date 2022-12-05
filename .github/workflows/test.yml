@@ -11,7 +11,7 @@ jobs:
       max-parallel: 4
       matrix:
         os:
-          - Ubuntu
+          - Ubuntu:18:04
         #          - Windows
         #          - MacOs
         python-version:

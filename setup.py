@@ -1,16 +1,16 @@
-import sys
 import os
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 try:
     readme = open(os.path.join(os.path.dirname(__file__), "README.rst")).read()
-except:
+except OSError:
     readme = ""
 
-version = "0.2.6"
+version = "0.2.7"
 
 install_requires = [
     "Django",
+    "packaging",
 ]
 
 tests_require = [
@@ -18,27 +18,13 @@ tests_require = [
     "mock",
 ]
 
-try:
-    PY2 = sys.version_info[0] == 2
-    LTE_PY26 = PY2 and (7 > sys.version_info[1])
-    PY3 = sys.version_info[0] == 3
-
-    if LTE_PY26:
-        install_requires.append("importlib")
-except:
-    pass
-
 setup(
     name="django-nine",
     version=version,
     description="Version checking library.",
     long_description="{0}".format(readme),
     classifiers=[
-        "Programming Language :: Python :: 2.6",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",

@@ -15,6 +15,13 @@ are used for versioning (schema follows below):
   0.3.2 to 0.4).
 - All backwards incompatible changes are mentioned in this document.
 
+0.2.7
+-----
+2022-12-05
+
+- Added ``packaging`` to the required dependencies.
+- Remove mentions of Python 2.6, 2.7, 3.4 support from README.
+
 0.2.6
 -----
 2022-12-01

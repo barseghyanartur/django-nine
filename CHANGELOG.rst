@@ -20,7 +20,8 @@ are used for versioning (schema follows below):
 2022-12-05
 
 - Added ``packaging`` to the required dependencies.
-- Remove mentions of Python 2.6, 2.7, 3.4 support from README.
+- Remove mentions of Python 2.6, 2.7, 3.4 and 3.5 support from README (since
+  they are no longer tested against).
 
 0.2.6
 -----

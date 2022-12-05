@@ -4,88 +4,100 @@ on: [push, pull_request]
 
 jobs:
   test:
-
-    runs-on: ubuntu-latest
+    name: test ${{ matrix.python-version }} - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}-latest
     strategy:
+      fail-fast: false
       max-parallel: 4
       matrix:
-        include:
-          - python-version: 3.6
-            requirements: django_2_2
-            tox_env: py36-django22
-          - python-version: 3.7
-            requirements: django_2_2
-            tox_env: py37-django22
-          - python-version: 3.8
-            requirements: django_2_2
-            tox_env: py38-django22
-          - python-version: 3.9
-            requirements: django_2_2
-            tox_env: py39-django22
-
-          - python-version: 3.6
-            requirements: django_3_0
-            tox_env: py36-django30
-          - python-version: 3.7
-            requirements: django_3_0
-            tox_env: py37-django30
-          - python-version: 3.8
-            requirements: django_3_0
-            tox_env: py38-django30
-          - python-version: 3.9
-            requirements: django_3_0
-            tox_env: py39-django30
-
-          - python-version: 3.6
-            requirements: django_3_1
-            tox_env: py36-django31
-          - python-version: 3.7
-            requirements: django_3_1
-            tox_env: py37-django31
-          - python-version: 3.8
-            requirements: django_3_1
-            tox_env: py38-django31
-          - python-version: 3.9
-            requirements: django_3_1
-            tox_env: py39-django31
-
-          - python-version: 3.6
-            requirements: django_3_2
-            tox_env: py36-django32
-          - python-version: 3.7
-            requirements: django_3_2
-            tox_env: py37-django32
-          - python-version: 3.8
-            requirements: django_3_2
-            tox_env: py38-django32
-          - python-version: 3.9
-            requirements: django_3_2
-            tox_env: py39-django32
-
-          - python-version: 3.8
-            requirements: django_4_0
-            tox_env: py38-django40
-          - python-version: 3.9
-            requirements: django_4_0
-            tox_env: py39-django40
-          - python-version: '3.10'
-            requirements: django_4_0
-            tox_env: py310-django40
-
-          - python-version: 3.8
-            requirements: django_4_1
-            tox_env: py38-django41
-          - python-version: 3.9
-            requirements: django_4_1
-            tox_env: py39-django41
-          - python-version: '3.10'
-            requirements: django_4_1
-            tox_env: py310-django41
+        os:
+          - Ubuntu
+        #          - Windows
+        #          - MacOs
+        python-version:
+          - "3.11"
+          - "3.10"
+          - "3.9"
+          - "3.8"
+          - "3.7"
+          - "3.6"
+#        include:
+#          - python-version: 3.6
+#            requirements: django_2_2
+#            tox_env: py36-django22
+#          - python-version: 3.7
+#            requirements: django_2_2
+#            tox_env: py37-django22
+#          - python-version: 3.8
+#            requirements: django_2_2
+#            tox_env: py38-django22
+#          - python-version: 3.9
+#            requirements: django_2_2
+#            tox_env: py39-django22
+#
+#          - python-version: 3.6
+#            requirements: django_3_0
+#            tox_env: py36-django30
+#          - python-version: 3.7
+#            requirements: django_3_0
+#            tox_env: py37-django30
+#          - python-version: 3.8
+#            requirements: django_3_0
+#            tox_env: py38-django30
+#          - python-version: 3.9
+#            requirements: django_3_0
+#            tox_env: py39-django30
+#
+#          - python-version: 3.6
+#            requirements: django_3_1
+#            tox_env: py36-django31
+#          - python-version: 3.7
+#            requirements: django_3_1
+#            tox_env: py37-django31
+#          - python-version: 3.8
+#            requirements: django_3_1
+#            tox_env: py38-django31
+#          - python-version: 3.9
+#            requirements: django_3_1
+#            tox_env: py39-django31
+#
+#          - python-version: 3.6
+#            requirements: django_3_2
+#            tox_env: py36-django32
+#          - python-version: 3.7
+#            requirements: django_3_2
+#            tox_env: py37-django32
+#          - python-version: 3.8
+#            requirements: django_3_2
+#            tox_env: py38-django32
+#          - python-version: 3.9
+#            requirements: django_3_2
+#            tox_env: py39-django32
+#
+#          - python-version: 3.8
+#            requirements: django_4_0
+#            tox_env: py38-django40
+#          - python-version: 3.9
+#            requirements: django_4_0
+#            tox_env: py39-django40
+#          - python-version: '3.10'
+#            requirements: django_4_0
+#            tox_env: py310-django40
+#
+#          - python-version: 3.8
+#            requirements: django_4_1
+#            tox_env: py38-django41
+#          - python-version: 3.9
+#            requirements: django_4_1
+#            tox_env: py39-django41
+#          - python-version: '3.10'
+#            requirements: django_4_1
+#            tox_env: py310-django41
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
@@ -94,8 +106,14 @@ jobs:
         pip install pip-tools
         pip-compile examples/requirements/${{ matrix.requirements }}.in
         pip install -r examples/requirements/${{ matrix.requirements }}.in
-    - name: Run Tests
-      run: tox -e ${{ matrix.tox_env }}
+    - name: Install tox
+      run: python -m pip install tox-gh-actions
+#    - name: Run Tests
+#      run: tox -e ${{ matrix.tox_env }}
+    - name: Run test suite
+      run: tox -r
+      env:
+        PYTEST_ADDOPTS: "-vv --durations=10"
     - name: Coveralls
       id: coveralls-setup
       continue-on-error: true

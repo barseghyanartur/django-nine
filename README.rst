@@ -15,6 +15,10 @@ django-nine
    :target: https://github.com/barseghyanartur/django-nine/actions/workflows/test.yml
    :alt: Build Status
 
+.. image:: https://readthedocs.org/projects/django-nine/badge/?version=latest
+    :target: http://django-nine.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 .. image:: https://img.shields.io/badge/license-GPL--2.0--only%20OR%20LGPL--2.1--or--later-blue.svg
    :target: https://github.com/barseghyanartur/django-nine/#License
    :alt: GPL-2.0-only OR LGPL-2.1-or-later
@@ -25,7 +29,7 @@ django-nine
 
 Prerequisites
 =============
-- Python 3.6, 3.7, 3.8, 3.9 and 3.10.
+- Python 3.7, 3.8, 3.9 and 3.10.
 - Django 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 2.0, 2.1, 2.2, 3.0, 3.1, 3.2,
   4.0 and 4.1.
 

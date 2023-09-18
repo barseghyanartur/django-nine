@@ -145,17 +145,56 @@ matrix:
       dist: xenial
     - env: TOX_ENV=py38-django32
       python: 3.8
-      dist: xenial
+      dist: jammy
+    - env: TOX_ENV=py39-django32
+      python: 3.9
+      dist: jammy
+    - env: TOX_ENV=py310-django32
+      python: 3.10
+      dist: jammy
 
-    - env: TOX_ENV=py36-djangomaster
-      python: 3.6
-      dist: xenial
-    - env: TOX_ENV=py37-djangomaster
-      python: 3.7
-      dist: xenial
-    - env: TOX_ENV=py38-djangomaster
+    - env: TOX_ENV=py38-django40
       python: 3.8
-      dist: xenial
+      dist: jammy
+    - env: TOX_ENV=py39-django40
+      python: 3.9
+      dist: jammy
+    - env: TOX_ENV=py310-django40
+      python: 3.10
+      dist: jammy
+
+    - env: TOX_ENV=py38-django41
+      python: 3.8
+      dist: jammy
+    - env: TOX_ENV=py39-django41
+      python: 3.9
+      dist: jammy
+    - env: TOX_ENV=py310-django41
+      python: 3.10
+      dist: jammy
+    - env: TOX_ENV=py311-django41
+      python: 3.11
+      dist: jammy
+
+    - env: TOX_ENV=py38-django42
+      python: 3.8
+      dist: jammy
+    - env: TOX_ENV=py39-django42
+      python: 3.9
+      dist: jammy
+    - env: TOX_ENV=py310-django42
+      python: 3.10
+      dist: jammy
+    - env: TOX_ENV=py311-django42
+      python: 3.11
+      dist: jammy
+
+    - env: TOX_ENV=py310-djangomaster
+      python: 3.10
+      dist: jammy
+    - env: TOX_ENV=py311-djangomaster
+      python: 3.11
+      dist: jammy
 
 #  # django22 and django-master can only be installed into xenial images
 #    - python: 3.7

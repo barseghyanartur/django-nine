@@ -58,6 +58,9 @@ pip-compile django_4_0.in "$@"
 echo "\n\npip-compile django_4_1.in"
 pip-compile django_4_1.in "$@"
 
+echo "\n\npip-compile django_4_2.in"
+pip-compile django_4_2.in "$@"
+
 echo "\n\npip-compile django_master.in"
 pip-compile django_master.in "$@"
 

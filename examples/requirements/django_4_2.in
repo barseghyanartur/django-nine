@@ -1,0 +1,8 @@
+pytest
+pytest-django
+pytest-cov
+
+-r base.in
+-r testing.in
+
+Django>=4.2,<4.3

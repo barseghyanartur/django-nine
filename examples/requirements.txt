@@ -1,1 +1,1 @@
--r requirements/django_1_8.txt
+-r requirements/django_4_2.txt

@@ -1,6 +1,10 @@
 ===========
 django-nine
 ===========
+.. note::
+
+   Consider using https://github.com/barseghyanartur/versus
+
 `django-nine` - version checking library for Django.
 
 .. image:: https://img.shields.io/pypi/v/django-nine.svg

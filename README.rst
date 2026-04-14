@@ -3,7 +3,21 @@ django-nine
 ===========
 .. note::
 
-   Consider using https://github.com/barseghyanartur/versus
+   **Deprecation notice**
+
+   Consider using https://github.com/barseghyanartur/versus instead.
+
+   .. code-block:: python
+
+      from versus import get_version
+      
+      django_version = get_version("django")
+      print(django_version)  # 5.2.1
+      
+      django_version.gte("4.2")  # True
+      django_version.gte("5.2")  # True
+      django_version.gte("5.2.1")  # True
+      django_version.gte("5.2.2")  # False
 
 `django-nine` - version checking library for Django.
 
